@@ -19,7 +19,7 @@ function ApiFetch() {
   }, []);
 
   return (
-    <div className="App-right-container">
+    <div className="App-images-list">
       {images.length > 0 ? images.map((img) =>
         <Thumb
           key={img.id}

@@ -7,8 +7,12 @@ function App() {
     <div>
       <Header/>
       <div className="App-container">
-        <div className="App-left-container"></div>
-         <ApiFetch/>
+        <div className="App-left-container">
+
+        </div>
+        <div className="App-right-container">
+          <ApiFetch/>
+        </div>
       </div>
 
     </div>

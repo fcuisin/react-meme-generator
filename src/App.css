@@ -42,13 +42,15 @@ html {
   flex: 0 0 50%;
   overflow: scroll;
   padding: 5px;
+}
+
+.App-images-list {
   display: grid;
   height: 80vh;
   cursor: pointer;
   grid-gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
   padding: 1rem;
-  overflow-y: scroll;
 }
 
 .List-thumbnail img {
