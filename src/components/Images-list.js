@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Thumb from './Thumbnail.js';
 
-function ApiFetch() {
+function ApiFetch({selectImg}) {
 
   const [images, setImages] = useState([]);
 
@@ -24,7 +24,10 @@ function ApiFetch() {
         <Thumb
           key={img.id}
           name={img.name}
+          width={img.width}
+          height={img.height}
           url={img.url}
+          selectImg={selectImg}
         />
       ) : <p>Loading...</p>}
     </div>

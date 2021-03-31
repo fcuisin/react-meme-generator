@@ -35,22 +35,25 @@ html {
 
 .App-left-container {
   display: flex;
+  flex-direction: column;
+  flex: 0.5;
   flex: 0 0 50%;
+  padding: 20px;
+  height: 80vh;
 }
 
 .App-right-container {
   flex: 0 0 50%;
   overflow: scroll;
-  padding: 5px;
+  padding: 20px;
+  height: 80vh;
 }
 
 .App-images-list {
   display: grid;
-  height: 80vh;
   cursor: pointer;
   grid-gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-  padding: 1rem;
 }
 
 .List-thumbnail img {
@@ -60,6 +63,28 @@ html {
 
 .List-thumbnail p {
   padding: 10px;
+}
+
+.App-meme-form {
+  display: flex;
+}
+
+.App-meme-form input {
+  flex: 1;
+  padding: 10px;
+  margin: 0px 5px 20px 5px;
+  border: 2px solid #fff;
+  border-radius: 10px;
+}
+
+.App-meme-window {
+  height: calc(80vh - 200px);
+  text-align: center;
+}
+
+.App-meme-window svg {
+  border: 2px solid #fff;
+  width: 100%;
 }
 
 @keyframes App-logo-spin {
