@@ -1,10 +1,19 @@
-import React from 'react';
+import React, {useRef} from 'react';
+import {saveSvgAsPng} from 'save-svg-as-png';
 
 function Meme({img, textTop, textBottom}) {
 
+    const ref = useRef();
+
+    const downloadMeme = () => {
+      saveSvgAsPng(ref.current, `Meme Generator - ${img.name}.png`)
+    }
+
     return(
       <div className="App-meme-window">
+        <button onClick={downloadMeme}>Download</button>
         <svg
+        ref={ref}
         height="600px"
         viewBox="0 0 579 375"
         preserveAspectRatio="xMidYMid meet"
