@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+
 * {
   margin: 0;
   box-sizing: border-box;
@@ -5,7 +7,12 @@
 }
 
 html {
-  background-color: #282c34;
+  background-color: #1b2021;
+}
+
+h1, h2, p, input, button {
+  font-family: 'Oswald', sans-serif;
+  color: white;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -26,27 +33,28 @@ html {
   font-size: calc(10px + 2vmin);
   color: white;
   text-align: center;
-  border-bottom: 2px solid #fff;
 }
 
 .App-container {
   display: flex;
+
 }
 
 .App-left-container {
   display: flex;
   flex-direction: column;
-  flex: 0.5;
-  flex: 0 0 50%;
+  flex: 0 0 60%;
   padding: 20px;
   height: 80vh;
 }
 
 .App-right-container {
-  flex: 0 0 50%;
+  flex: 0 0 40%;
   overflow: scroll;
   padding: 20px;
   height: 80vh;
+  border: 2px solid #5f939a;
+  border-radius: 10px;
 }
 
 .App-images-list {
@@ -67,6 +75,8 @@ html {
 
 .App-meme-form {
   display: flex;
+  justify-content: center;
+  align-items: baseline;
 }
 
 .App-meme-form input {
@@ -75,6 +85,8 @@ html {
   margin: 0px 5px 20px 5px;
   border: 2px solid #fff;
   border-radius: 10px;
+  outline: 0;
+  color: black;
 }
 
 .App-meme-window {
@@ -82,9 +94,18 @@ html {
   text-align: center;
 }
 
-.App-meme-window svg {
-  border: 2px solid #fff;
-  width: 100%;
+.App-meme-download {
+  text-align: center;
+  margin: 0px 0px 20px 0px;
+}
+
+.App-meme-download button {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #5f939a;
+  cursor: pointer;
+  border: 0;
+  outline: 0;
 }
 
 @keyframes App-logo-spin {

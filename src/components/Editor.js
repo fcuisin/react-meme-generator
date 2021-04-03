@@ -20,17 +20,19 @@ class MemeMaker extends React.Component {
     return (
       <div>
         <form className="App-meme-form">
+          <p>Top Text :</p>
           <input
             type="text"
             name="topText"
-            placeholder="Top Text"
+            placeholder="OMG!"
             value={this.state.topText}
             onChange={this.handleChange}
           />
+          <p>Bottom Text :</p>
           <input
             type="text"
             name="bottomText"
-            placeholder="Bottom Text"
+            placeholder="You're crazy"
             value={this.state.bottomText}
             onChange={this.handleChange}
           />
