@@ -37,7 +37,6 @@ h1, h2, p, input, button {
 
 .App-container {
   display: flex;
-
 }
 
 .App-left-container {
@@ -50,18 +49,25 @@ h1, h2, p, input, button {
 
 .App-right-container {
   flex: 0 0 40%;
-  overflow: scroll;
   padding: 20px;
-  height: 80vh;
-  border: 2px solid #5f939a;
-  border-radius: 10px;
+}
+
+.App-container-title {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #FFCB21;
 }
 
 .App-images-list {
+  overflow: scroll;
+  height: 100vh;
   display: grid;
   cursor: pointer;
   grid-gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  padding: 20px;
+  border: 2px solid #fff;
+  border-radius: 10px;
 }
 
 .List-thumbnail img {
@@ -82,7 +88,7 @@ h1, h2, p, input, button {
 .App-meme-form input {
   flex: 1;
   padding: 10px;
-  margin: 0px 5px 20px 5px;
+  margin: 0px 20px 30px 20px;
   border: 2px solid #fff;
   border-radius: 10px;
   outline: 0;
@@ -96,16 +102,17 @@ h1, h2, p, input, button {
 
 .App-meme-download {
   text-align: center;
-  margin: 0px 0px 20px 0px;
+  margin: 0px 0px 30px 0px;
 }
 
 .App-meme-download button {
   padding: 10px;
   border-radius: 10px;
-  background-color: #5f939a;
+  background-color: #FFCB21;;
   cursor: pointer;
   border: 0;
   outline: 0;
+  color: #1b2021;
 }
 
 @keyframes App-logo-spin {
@@ -114,5 +121,24 @@ h1, h2, p, input, button {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .App-container {
+    display:block;
+  }
+
+  .App-meme-form {
+    display: block;
+  }
+
+  .App-meme-form input {
+    width: 80%;
+  }
+
+  .App-meme-form p {
+    margin-bottom: 10px;
+    text-align: center;
   }
 }

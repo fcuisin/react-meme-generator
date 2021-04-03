@@ -16,11 +16,13 @@ function App() {
     <div>
       <Header/>
       <div className="App-container">
-        <div className="App-left-container">
-          <MemeMaker data={selectedImg}/>
-        </div>
         <div className="App-right-container">
+          <h2 className="App-container-title">1. Pick a base</h2>
           <ApiFetch selectImg={selectImg}/>
+        </div>
+        <div className="App-left-container">
+          <h2 className="App-container-title">2. Be creative</h2>
+          <MemeMaker data={selectedImg}/>
         </div>
       </div>
 

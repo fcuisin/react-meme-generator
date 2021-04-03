@@ -63,7 +63,7 @@ function Meme({img, textTop, textBottom}) {
         <div className="App-meme-window">
           <svg
           ref={ref}
-          width="500px"
+          width="100%"
           height="500px"
           preserveAspectRatio="xMidYMid meet"
           >
