@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+
 * {
   margin: 0;
   box-sizing: border-box;
@@ -5,7 +7,12 @@
 }
 
 html {
-  background-color: #282c34;
+  background-color: #1b2021;
+}
+
+h1, h2, p, input, button, select {
+  font-family: 'Oswald', sans-serif;
+  color: white;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -26,7 +33,6 @@ html {
   font-size: calc(10px + 2vmin);
   color: white;
   text-align: center;
-  border-bottom: 2px solid #fff;
 }
 
 .App-container {
@@ -35,20 +41,33 @@ html {
 
 .App-left-container {
   display: flex;
-  flex: 0 0 50%;
+  flex-direction: column;
+  flex: 0 0 60%;
+  padding: 20px;
+  height: 80vh;
 }
 
 .App-right-container {
-  flex: 0 0 50%;
+  flex: 0 0 40%;
+  padding: 20px;
+}
+
+.App-container-title {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #FFCB21;
+}
+
+.App-images-list {
   overflow: scroll;
-  padding: 5px;
+  height: 100vh;
   display: grid;
-  height: 80vh;
   cursor: pointer;
   grid-gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-  padding: 1rem;
-  overflow-y: scroll;
+  padding: 20px;
+  border: 2px solid #fff;
+  border-radius: 10px;
 }
 
 .List-thumbnail img {
@@ -60,11 +79,66 @@ html {
   padding: 10px;
 }
 
+.App-meme-form {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.App-meme-form input, .App-meme-form select {
+  flex: 2 2 1;
+  padding: 10px;
+  margin: 0px 20px 30px 20px;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  outline: 0;
+  color: black;
+}
+
+.App-meme-window {
+  height: calc(80vh - 200px);
+  text-align: center;
+}
+
+.App-meme-download {
+  text-align: center;
+  margin: 0px 0px 30px 0px;
+}
+
+.App-meme-download button {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #FFCB21;;
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+  color: #1b2021;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .App-container {
+    display:block;
+  }
+
+  .App-meme-form {
+    display: block;
+  }
+
+  .App-meme-form input {
+    width: 80%;
+  }
+
+  .App-meme-form p {
+    margin-bottom: 10px;
+    text-align: center;
   }
 }
