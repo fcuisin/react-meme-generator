@@ -1,7 +1,7 @@
 import React, {useState, useRef} from 'react';
 import {saveSvgAsPng} from 'save-svg-as-png';
 
-function Meme({img, textTop, textBottom}) {
+function Meme({img, textTop, textBottom, color}) {
 
     const ref = useRef();
 
@@ -17,7 +17,8 @@ function Meme({img, textTop, textBottom}) {
       fontSize: '36px',
       textTransform: 'uppercase',
       fontFamily: 'Oswald',
-      fontWeight: 'bold'
+      fontWeight: 'bold',
+      fill: `${color}`,
     }
 
     const getTextPositionTop = (e, type) => {

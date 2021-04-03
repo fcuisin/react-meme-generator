@@ -10,7 +10,7 @@ html {
   background-color: #1b2021;
 }
 
-h1, h2, p, input, button {
+h1, h2, p, input, button, select {
   font-family: 'Oswald', sans-serif;
   color: white;
 }
@@ -85,8 +85,8 @@ h1, h2, p, input, button {
   align-items: baseline;
 }
 
-.App-meme-form input {
-  flex: 1;
+.App-meme-form input, .App-meme-form select {
+  flex: 2 2 1;
   padding: 10px;
   margin: 0px 20px 30px 20px;
   border: 2px solid #fff;

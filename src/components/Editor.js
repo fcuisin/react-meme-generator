@@ -7,13 +7,23 @@ class MemeMaker extends React.Component {
     this.state = {
       topText: '',
       bottomText: '',
+      color: '#000',
     }
     this.handleChange = this.handleChange.bind(this);
+    this.handleChangeColor = this.handleChangeColor.bind(this);
   }
 
   handleChange(event) {
     const {name, value} = event.target
     this.setState({ [name]: value })
+  }
+
+  handleChangeColor(event) {
+    if(event.target.value === "white") {
+      this.setState( {color: '#fff'})
+    } else if (event.target.value === "black") {
+      this.setState( {color: '#000'})
+    }
   }
 
   render() {
@@ -36,8 +46,14 @@ class MemeMaker extends React.Component {
             value={this.state.bottomText}
             onChange={this.handleChange}
           />
+          <select name="color"
+          onChange={this.handleChangeColor}
+          >
+            <option value="black">Black</option>
+            <option value="white">White</option>
+          </select>
         </form>
-        <Meme img={this.props.data} textTop={this.state.topText} textBottom={this.state.bottomText}/>
+        <Meme img={this.props.data} textTop={this.state.topText} textBottom={this.state.bottomText} color={this.state.color}/>
       </div>
     )
   }
